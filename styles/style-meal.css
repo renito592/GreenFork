@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito',sans-serif;
+}
+body {
+    background: #39b54a;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.background-container {
+    background: url('header-background.jpg');
+    background-position-y: -150px;
+    background-position-x: -200px;
+    height: 300px;
+    width: 100%;
+    position: relative;
+}
+.background-container .page-title {
+    position: absolute;
+    top: 140px;
+    margin-left: 50%;
+    transform: translate(-50%,50%);
+    
+    color: #fff;
+    font-size: 2.5em;
+}
+.main-content {
+    background: #fff;
+}
+.aside-nav {
+    max-width: 0;
+    width: 20%;
+    transition: all .7s ease-out;
+    position: relative;
+    clear: both;
+    float: left;
+    left: -30px;
+    background: #fff;
+    visibility: hidden;
+    border: 1px solid #39b54a;
+}
+.aside-nav nav ul {
+    visibility: hidden;
+}
+.menu-btn {
+    display: none;
+}
+    .main-content .menu-icon {
+        cursor: pointer;
+        z-index: 4;
+        position: absolute;
+        top: -30px;
+        left: 20px;
+    }
+
+.main-content .menu-icon .nav-icon {
+    background: #39b54a;
+    display: block;
+    height: 3px;
+    width: 25px;
+    position: relative;
+    transition: background .5s ease-in;
+}
+.main-content .menu-icon .nav-icon::before,.main-content .menu-icon .nav-icon::after {
+    background: #39b54a;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all .3s ease-in;
+}
+.main-content .menu-icon .nav-icon::before {
+    top: 10px;
+}
+.main-content .menu-icon .nav-icon::after {
+    top: -10px;
+}
+.main-content .menu-btn:checked ~ .aside-nav nav ul {
+    visibility: visible;
+}
+.main-content .menu-btn:checked ~ .aside-nav {
+    visibility: visible;
+    max-width: 30%;      
+}
+.main-content .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+}
+.main-content .menu-btn:checked ~ .menu-icon .nav-icon::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.main-content .menu-btn:checked ~ .menu-icon .nav-icon::after {
+    transform: rotate(45deg);
+    top:0;
+}
+.aside-nav nav ul li {
+    margin-top: 50px;
+    text-align: center;
+}
+.aside-nav nav ul li span {
+    font-size: 1.5em;
+    color: #003316;
+    cursor: pointer;
+}
+.aside-nav #cart li span {
+    float: right;
+}
+.aside-nav #cart li {
+    padding:0 20px;
+    clear: both;
+}
+.aside-nav .total {
+    text-align: right;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+.aside-nav h3 {
+    text-align: center;
+    color: #39b54a;
+    font-weight: bold;
+    margin: 20px;
+}
+hr {
+    clear: both;
+    margin: 20px;
+}
+.meals-section .order {
+    background: #9e0b0f;
+    padding: 15px;
+    transition: all .5s ease;
+    cursor: pointer;
+    box-shadow: 9px 11px 20px -5px rgba(0,0,0,0.75);
+    z-index: 3;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  } 
+  .meals-section .when-order-sticky {
+      top: -60px;
+  }
+  .meals-section {
+    position: relative;
+  }
+.meals-section .order:hover {
+    background: #4b0507;
+    box-shadow: none;
+}
+.meals-section .order p {
+    text-align: center;
+    color: #fff;
+    font-size: 1.5em;
+    
+}
+.meals-section .order p i {
+    color: #39b54a;
+}
+.meals-section .meals-container {
+    display: grid;
+    gap: 20px;
+    justify-content: center;  
+    grid-template-columns: repeat(auto-fill,290px);
+    padding: 30px 0;
+    margin-top: 30px;
+    
+}
+.meal-card {
+    width: 290px;   
+}
+.meal-card label {
+    cursor: pointer;
+}
+.meal-card label .meal-info {
+    position: relative;
+    border: 1px solid #003316;
+    border-radius: 5px;
+    padding:10px 20px;
+    height: 100%;
+    transition: background .5s ease-out;
+}
+.meal-card label .meal-info figure {
+    height: 200px;
+    overflow: hidden;
+}
+.meal-card label .meal-info figure img {
+    width: 250px; 
+}
+
+.meal-card label .meal-info figure .ingredients {
+    font-size: 0.9em;
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    background: transparent;
+    text-align: center;  
+    transition: all .5s ease-out;
+    overflow: hidden;
+    z-index: 2;
+    padding: 20px;
+}
+.meal-card label .meal-info figure:hover .ingredients{
+    color: #fff;
+    background: rgba(0,0,0,0.75);
+    
+}
+.meal-card label .meal-info figcaption {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.3em;
+    color: #003316;
+    
+}
+.meal-card label .meal-info .price {
+    color: #9e0b0f;
+    font-size: 1.5em;
+    text-align: center;
+}
+.meal-card label .selected-meal-btn {
+    display: none;
+}
+.meal-card label .selected-meal-btn:checked ~ .meal-info{
+    background: rgba(57, 181, 74, 0.4);
+}
+@media (max-width:1024px) {
+    .main-content .menu-btn:checked ~ .aside-nav {
+        visibility: visible;
+        max-width: 100%;   
+        display: block;   
+        position: none;
+        left: 0;
+        float: none;
+    }
+    .aside-nav {
+        width: 100%;
+    }
+}
+@media (max-width:768px) {
+    .background-container .page-title {
+        font-size: 1.5em;
+    }
+}

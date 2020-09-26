@@ -1,0 +1,43 @@
+.main-footer {
+    text-align: center;
+}
+.main-footer p {
+    font-family: 'Nunito',sans-serif;
+    color: #fff;
+    font-size: 1.5em;
+}
+.main-footer .social-media {
+    margin:20px auto;
+    display: flex;
+    width: 60%;
+    justify-content: center;
+}
+.main-footer .social-media a {
+    flex: 1;
+}
+.main-footer .social-media a i {
+    font-size: 3em;
+    color: #9e0b0f;
+}
+.main-footer hr {
+    width: 80%;
+    margin: auto;
+}
+.main-footer .copyright {
+    margin: 20px;
+    font-size: 0.8em;
+}
+.main-footer ul li {
+    margin: 10px;
+    display: inline-block;
+}
+.main-footer ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+}
+@media (max-width:480px) {
+    .main-footer  .social-media {
+        width: 90%;
+    }
+}

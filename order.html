@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finish your order</title> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style-menu.css">
+    <link rel="stylesheet" href="styles/style-footer.css">
+    <link rel="stylesheet" href="styles/style-order.css">
+    <script src="https://kit.fontawesome.com/d7add9683a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   
+</head>
+<body>
+    <div id="wrapper">
+        <div class="background-container">
+
+          <header class="main-header">
+            <div class="head-flex-child logo-container">
+                <a href="index.html">
+                    <img class="logo" src="images/logo2.png" alt="logo">
+                </a>
+            </div>
+            <nav class="head-flex-child main-menu">
+                <input type="checkbox" name="hamburger" id="hamburger" class="hamburger">
+                <label class="menu-icon" id="menu-icon" for="hamburger"><span class="nav-icon"></span></label>
+                <ul class="menu-list">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="meal.html">Meal</a>
+                    </li>
+                    <li>
+                        <a href="https://tasty.co/topic/easy-dinner">Recipes</a>
+                    </li>
+                </ul>  
+            </nav>
+            <nav class="head-flex-child main-search">  
+                <input type="search" name="search" id="search" class="search" placeholder="Search...">
+                <label for="search" id="lbl-search"><i class="fas fa-search"></i></label>
+            </nav>
+        </header>
+
+            <h1 class="page-title">Finish your order</h1>
+            </div>
+
+            <main class="main-content">
+                <form action="form.php" method="post" id="order-form">
+                    
+                    <h2>Who is hungry?</h2>
+                        <hr>
+                        <section id="personal-info">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                            <label for="input-f-name" class="labels">First Name *</label>
+                            <input type="text" class="form-control" id="input-f-name" name="first name">
+                            <p class="error" id="error-input-f-name"></p>
+                            </div>
+                            <div class="form-group col-md-6">
+                            <label for="input-l-name" class="labels">Last Name *</label>
+                            <input type="text" class="form-control" id="input-l-name" name="last name">
+                            <p class="error" id="error-input-l-name"></p>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                            <label for="input-email" class="labels">Email</label>
+                            <input type="text" class="form-control" id="input-email" name="email" placeholder="user@example.com">
+                            <p class="error" id="error-input-email"></p>
+                            </div>
+                            <div class="form-group col-md-6">
+                            <label for="input-tel" class="labels">Telephone *</label>
+                            <input type="text" class="form-control" id="input-tel" name="telephone" placeholder="+359 *** *** *** format only.">
+                            <p class="error" id="error-input-tel"></p>
+                            </div>
+                        </div>
+                    </section>
+
+                        <h2>Where are you?</h2>
+                        <hr>
+                      <section id="adress-info">             
+                        <div class="form-group">
+                            <label for="input-address">Address *</label>
+                            <input type="text" class="form-control" id="input-address" placeholder="1234 Main St" name="adress">
+                            <p class="error" id="error-input-address"></p>
+                          </div>
+                          <div class="form-group">
+                            <label for="input-address2">Address 2</label>
+                            <input type="text" class="form-control" id="input-address2" placeholder="Apartment, studio, or floor" name="adress 2">
+                            <p class="error" id="error-input-address2"></p>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="input-city">City *</label>
+                              <input type="text" class="form-control" id="input-city" name="city">
+                              <p class="error" id="error-input-city"></p>
+                            </div>
+                            <div class="form-group col-md-4">
+                              <label for="input-state">Country</label>
+                              <select id="input-state" class="form-control">
+                                <option selected>Bulgaria</option>
+                                <option>Romania</option>
+                                <option>Serbia</option>
+                                <option>North Macedonia</option>
+                                <option>Greece</option>
+                                <option>Turkey</option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                              <label for="input-zip">Zip *</label>
+                              <input type="text" class="form-control" id="input-zip" name="zip code">
+                              <p class="error" id="error-input-zip"></p>
+                            </div>
+                          </div>
+                      </section> 
+
+                      <h2>Peyment?</h2>
+                    <hr>
+                      <section>
+                        <div class="d-block my-3">
+                            <div class="custom-control custom-radio">
+                              <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked="">
+                              <label class="custom-control-label" for="credit">Credit card</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                              <input id="debit" name="paymentMethod" type="radio" class="custom-control-input">
+                              <label class="custom-control-label" for="debit">Debit card</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                              <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input">
+                              <label class="custom-control-label" for="paypal">PayPal</label>
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                            <label for="input-card-name" class="labels">Name on Card *</label>
+                            <input type="text" class="form-control" id="input-card-name" name="card name">
+                            <p class="error" id="error-input-card-name"></p>
+                            </div>
+                            <div class="form-group col-md-6">
+                            <label for="input-card-num" class="labels">Credit Card Number *</label>
+                            <input type="text" class="form-control" id="input-card-num" name="card number">
+                            <p class="error" id="error-input-card-num"></p>
+                          </div>
+                        </div>
+                      </section>
+
+                     <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="return Validate()">Finish My Order</button>
+                 </form>
+            </main>
+
+            <footer class="main-footer">
+              <img src="images/logo2.png" alt="logo">
+              <ul>
+                  <li>
+                      <a href="index.html">Home</a>
+                  </li>
+                  <li>
+                      <a href="meal.html">Meal</a>
+                  </li>
+                  <li>
+                      <a href="https://tasty.co/topic/easy-dinner">Recipes</a>
+                  </li>
+              </ul> 
+              <p>Follow us:</p>
+              <div class="social-media">
+                  <a href="https://www.facebook.com/renito.terzieva"><i class="fab fa-facebook-square" aria-hidden="true"></i></a> 
+                         <a href="https://twitter.com/login?lang=bg"><i class="fab fa-twitter-square" aria-hidden="true"></i></a> 
+                          <a href="https://www.instagram.com/reni_terzieva/?hl=bg"><i class="fab fa-instagram-square" aria-hidden="true"></i></a>
+                          <a href="mailto:renito592@gmail.com"><i class="fas fa-envelope-square" aria-hidden="true"></i></a>
+              </div>
+          <hr>
+              <p class="copyright">© 2020 FMI - Reneta Terzieva</p>
+          </footer>
+            <script src="script/open-search-button.js"></script>
+    </div>
+    <script>
+      var inputs=document.getElementsByClassName("form-control");
+      var errorsP=document.getElementsByClassName("error");
+        var firstName = document.getElementById("input-f-name");
+        var lastName =  document.getElementById("input-l-name");
+        var email =  document.getElementById("input-email");
+        var tel =  document.getElementById("input-tel");
+        var address = document.getElementById("input-address");
+        var address2 = document.getElementById("input-address2");
+        var city = document.getElementById("input-city");
+        var zip = document.getElementById("input-zip");
+        var cardName = document.getElementById("input-card-name");
+        var cardNum = document.getElementById("input-card-num");
+        function Validate() {
+        
+          for (let i = 0; i < inputs.length; i++) {
+            inputs[i].style.borderColor="#39b54a";
+            inputs[i].addEventListener("focus", function() {
+            this.style.boxShadow = "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #39b54a";
+             });
+             inputs[i].addEventListener("focusout", function() {
+            this.style.boxShadow = "none";
+             });
+          }
+    
+          for (let i = 0; i < errorsP.length; i++) {
+            errorsP[i].innerHTML="";         
+          }
+
+           if (IsEmpty(firstName) || NotName(firstName)) {
+              ErrorStyle(firstName);
+              firstName.focus();
+             return false;
+           } else
+           if (IsEmpty(lastName) || NotName(lastName)) {
+             ErrorStyle(lastName);
+             lastName.focus();
+             return false;
+           } else
+           if (IsEmpty(email) || NotEmail(email)) {
+             ErrorStyle(email);
+             email.focus();
+             return false;
+           } else
+           if (IsEmpty(tel) || NotTel(tel)) {
+             ErrorStyle(tel);
+             tel.focus();
+             return false;
+           }
+           if (IsEmpty(address)) {
+             ErrorStyle(address);
+             address.focus();
+             return false;
+           }
+           if (IsEmpty(address2)) {
+             ErrorStyle(address2);
+             address2.focus();
+             return false;
+           }
+           if (IsEmpty(city) || NotWords(city)) {
+             ErrorStyle(city);
+             city.focus();
+             return false;
+           }
+           if (IsEmpty(zip)|| NotZip(zip)) {
+             ErrorStyle(zip);
+             zip.focus();
+             return false;
+           }
+           if (IsEmpty(cardName) || NotWords(cardName)) {
+             
+             ErrorStyle(cardName);
+             cardName.focus();
+             return false;
+           }
+           
+           if (IsEmpty(cardNum) || NotCardNum(cardNum)) {
+             ErrorStyle(cardNum);
+             cardNum.focus();
+             return false;
+           }
+        }
+
+
+        function IsEmpty(element) {
+            if (element.value.length<2) {        
+                document.getElementById("error-" + element.id).innerHTML="Your "+element.name + " field is blank or too short.";
+                return true;  
+            }
+        }
+        function ErrorStyle(element) {
+          element.style.borderColor="#9e0b0f";
+            element.addEventListener("focus", function () {
+            this.style.boxShadow = "inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #9e0b0f";
+             });
+        }
+        function NotName(element) {
+          if (!element.value.match(/^[A-Za-z]+$/g)) {
+            document.getElementById("error-" + element.id).innerHTML="Your "+element.name + " is invalid.";
+            return true;
+          }
+        }
+        function NotEmail(element) {
+          if (!element.value.match(/^\w+@[a-zA-Z]+\.[a-zA-Z]{1,5}$/g)) {
+            document.getElementById("error-" + element.id).innerHTML="Please enter valid email.";
+            return true;
+          }
+        }
+        function NotTel(element) {
+          if (!element.value.match(/^\+[ ]*\d{2,3}[ ]*\d{3}[ ]*\d{3}[ ]*\d{3}$/g)) {
+            document.getElementById("error-" + element.id).innerHTML="Your "+element.name + "number is invalid. Follow +359 *** *** *** format.";
+            return true;
+          }
+        }
+        function NotWords(element) {
+          if (!element.value.match(/^[A-Za-z]+(?:[\s-]?[A-Za-z])*$/g)) {
+            document.getElementById("error-" + element.id).innerHTML="Your "+element.name + " is invalid.";
+            return true;
+          }
+        }
+        function NotZip(element) {
+          if (!element.value.match(/^[0-9]{4}$/g)) {
+            document.getElementById("error-" + element.id).innerHTML="Your "+element.name + " is invalid.";
+            return true;
+          }
+        }
+        function NotCardNum(element) {
+          //https://www.regextester.com/93608 credit card validation regex
+          if (!element.value.match(/4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35\d{3})\d{11}/g)) {
+            document.getElementById("error-" + element.id).innerHTML="Your "+element.name + " is invalid.";
+            return true;
+          }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background: #39b54a;
+}
+.background-container {
+    background-image: url("green-over.png"), url("background.jpg");
+    background-color: #39b54a;
+    background-size: 100% ;
+    background-repeat: no-repeat;
+    padding-bottom:55.6%;
+}
+
+.main-content .card {
+    display: block;
+    width: 45%;
+    text-align: center;
+    padding:2% 2%;
+    float: right;
+}
+.main-content .card .titles {
+    font-family: 'Nunito',sans-serif;
+    color: #fff;
+    font-size: 3em;
+}
+.main-content .card p {
+    font-family: 'Nunito',sans-serif;
+    color: #003316;
+    font-size: 1.5em;
+}
+.main-content .card button {
+    color: #fff;
+    background: #9e0b0f;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 30px;
+    font-size: 1.5em;
+    box-shadow: 9px 11px 20px -5px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+.main-content .card button:hover {
+    transition: all .3s;
+    background: #4b0507;
+    box-shadow: none;
+}
+.how-it-works .third {
+    font-size: 2em;
+    margin-top: 10px;
+    font-family: 'Nunito',sans-serif;
+    color: #9e0b0f;
+    text-align: center;
+}
+.how-it-works .deliver-steps {
+    display: flex;
+    width: 100%;
+   justify-content: space-between;
+   
+}
+.how-it-works .deliver-steps .deliver-step {
+    flex: 1;
+    
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+    
+}
+.how-it-works .deliver-steps .deliver-step p {
+    font-size: 1em;
+    margin: 10px 2px;
+    color: #003316;
+}
+.how-it-works .deliver-steps .deliver-step div i {
+    font-size: 3em;
+    margin-top: 20px;
+    color: #39b54a;
+}
+.how-it-works .deliver-steps .deliver-step .fa-numbers {
+    font-size: 1.5em;
+    color: #fff;
+    background: #9e0b0f;
+    border-radius: 50%;
+    padding:3px 10px;
+}
+.how-it-works {
+    padding: 20px;
+    clear: both;
+    background: #fff;
+}
+
+@media (max-width:1024px) {
+    
+    .main-content .card .titles {
+        font-size: 2em;
+    }
+    .main-content .card p {
+        font-size: 1em;
+    }
+    .main-content .card button {
+        font-size: 1em;
+    }
+    .main-content .card {
+        padding: 0 2%;
+    }
+    
+}
+@media (max-width:768px) {
+    .background-container {
+        background-position-y: 300px;
+        padding-bottom: 113%;
+    }
+    .main-content .card {
+        width: 100%;
+        padding: 20% 10%;
+    }
+}
+@media (max-width:600px) {
+    .background-container {
+        padding-bottom: 125%;
+    }
+}
+@media (max-width:480px) {
+    .background-container {
+        padding-bottom: 150%;
+    }
+    .how-it-works .deliver-steps {
+        display: block;
+    }
+}
+
+

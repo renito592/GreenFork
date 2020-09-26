@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pick your meal!</title>
+    <link rel="stylesheet" href="styles/style-menu.css">
+    <link rel="stylesheet" href="styles/style-footer.css">
+    <link rel="stylesheet" href="styles/style-meal.css">
+    <script src="https://kit.fontawesome.com/d7add9683a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nunito:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+
+        <div class="background-container">
+
+            <header class="main-header">
+                <div class="head-flex-child logo-container">
+                    <a href="index.html">
+                        <img class="logo" src="images/logo2.png" alt="logo">
+                    </a>
+                </div>
+                <nav class="head-flex-child main-menu">
+                    <input type="checkbox" name="hamburger" id="hamburger" class="hamburger">
+                    <label class="menu-icon" id="menu-icon" for="hamburger"><span class="nav-icon"></span></label>
+                    <ul class="menu-list">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="meal.html">Meal</a>
+                        </li>
+                        <li>
+                            <a href="https://tasty.co/topic/easy-dinner">Recipes</a>
+                        </li>
+                    </ul>  
+                </nav>
+                <nav class="head-flex-child main-search">  
+                    <input type="search" name="search" id="search" class="search" placeholder="Search...">
+                    <label for="search" id="lbl-search"><i class="fas fa-search"></i></label>
+                </nav>
+            </header>
+            
+        <h1 class="page-title">Pick Your Meal</h1>
+        </div>
+        <main class="main-content">     
+            <section class="meals-section">
+            <input type="checkbox" class="menu-btn" id="menu-btn">      
+            <label class="menu-icon" id="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>                   
+            <aside class="aside-nav">
+                <nav>
+                    <ul>
+                        <li>
+                            <span class="filter" id="all">All</span>
+                        </li>
+                        <li>
+                            <span class="filter" id="starters">Starters</span>
+                        </li>
+                        <li>
+                            <span class="filter" id="main-c">Main course</span>
+                        </li>
+                        <li>
+                            <span class="filter" id="desserts">Desserts</span>
+                        </li>
+                    </ul>
+                </nav>
+                <hr>
+                <h3>Cart</h3>
+                <ul id="cart">
+                </ul>
+                <hr>
+                <p class="total">Total: <span id="total-sum">0</span></p>
+            </aside>
+                <a class="order-link" href="order.html">
+                <header id="order" class="order">
+                    <p>Order <i class="fas fa-shopping-cart"></i> <i class="fas fa-arrow-right"></i>
+                    <span id="total-sum-top">
+
+                    </span></p>
+                </header>
+                </a>
+                <div class="meals-container">
+
+                    <article class="meal-card main-c">     
+                        <label for="seared-ahi-tuna">
+                            <input type="checkbox" name="selected-meal-btn" class="selected-meal-btn" id="seared-ahi-tuna" value="9.99" title="Seared Ahi Tuna & Arugula Pear Salad">
+                            <div class="meal-info">
+                                <figure>
+                                    <img src="images/food1.jpg" alt="Seared Ahi Tuna & Arugula Pear Salad">
+                                    <p class="ingredients">Ahi tuna steaks,
+                                    Kosher, toasted sesame, oil, honey, arugula, Asian pear, Radishes, Persian cucumber.</p>
+                                </figure>
+                                <figcaption>Seared Ahi Tuna & Arugula Pear Salad</figcaption>
+                                <p class="price">9.99$</p>            
+                            </div>
+                        </label>
+                    </article>
+
+                    <article class="meal-card starter">     
+                        <label for="keto-broccoli">
+                            <input type="checkbox" name="selected-meal-btn" class="selected-meal-btn" id="keto-broccoli" value="4.99" title="Keto Broccoli Salad">
+                            <div class="meal-info">
+                                <figure>
+                                    <img src="images/food2.jpg" alt="Keto Broccoli Salad">
+                                    <p class="ingredients">
+                                        Broccoli, Cheddar, red onion, toasted sliced almonds, bacon, chives, mayonnaise, apple cider vinegar, dijon mustard, black pepper.
+                                    </p>
+                                </figure>
+                                <figcaption>Keto Broccoli Salad</figcaption>
+                                <p class="price">4.99$</p>            
+                            </div>
+                        </label>
+                    </article>
+
+                    <article class="meal-card main-c">     
+                        <label for="avocado-black-bean-eggs">
+                            <input type="checkbox" name="selected-meal-btn" class="selected-meal-btn" id="avocado-black-bean-eggs" value="8.59" title="Avocado & black bean eggs">
+                            <div class="meal-info">
+                                <figure>
+                                    <img src="images/food3.jpg" alt="Avocado & black bean eggs">
+                                    <p class="ingredients">
+                                       Oil, chilli, garlic, eggs, black beans, cherry tomatoes, cumin seeds, avocado, avocado.
+                                    </p>
+                                </figure>
+                                <figcaption>Avocado & black bean eggs</figcaption>
+                                <p class="price">8.59$</p>            
+                            </div>
+                        </label>
+                    </article>
+
+                    <article class="meal-card main-c">     
+                        <label for="summer-fish-stew">
+                            <input type="checkbox" name="selected-meal-btn" class="selected-meal-btn" id="summer-fish-stew" value="11.20" title="Summer fish stew">
+                            <div class="meal-info">
+                                <figure>
+                                    <img src="images/food4.jpg" alt="Summer fish stew">
+                                    <p class="ingredients">
+                                        Bread, oil, onion, garlic, chilli flakes, tomatoes, white fish fillets, butter beans,  lemon.
+                                    </p>
+                                </figure>
+                                <figcaption>Summer fish stew</figcaption>
+                                <p class="price">11.20$</p>            
+                            </div>
+                        </label>
+                    </article>
+
+                    <article class="meal-card starter">     
+                        <label for="halloumi">
+                            <input type="checkbox" name="selected-meal-btn" class="selected-meal-btn" id="halloumi" value="7.43" title="Halloumi, carrot & orange salad">
+                            <div class="meal-info">
+                                <figure>
+                                    <img src="images/food5.jpg" alt="Halloumi, carrot & orange salad">
+                                    <p class="ingredients">
+                                        Oranges, mustard, honey, carrot, halloumi, baby spinach.
+                                    </p>
+                                </figure>
+                                <figcaption>Halloumi, carrot & orange salad</figcaption>
+                                <p class="price">7.43$</p>            
+                            </div>
+                        </label>
+                    </article>
+
+                    <article class="meal-card main-c">     
+                        <label for="roasted-lamb">
+                            <input type="checkbox" name="selected-meal-btn" class="selected-meal-btn" id="roasted-lamb" value="13.90" title="Moroccan roast lamb with roasted roots & coriander">
+                            <div class="meal-info">
+                                <figure>
+                                    <img src="images/food6.jpg" alt="Moroccan roast lamb with roasted roots & coriander">
+                                    <p class="ingredients">
+                                        Leg of lamb, red onions, butternut squash, celeriac, garlic cloves, coriander, cumin seeds, lemon, chilli.
+                                    </p>
+                                </figure>
+                                <figcaption>Moroccan roast lamb with roasted roots & coriander</figcaption>
+                                <p class="price">13.90$</p>            
+                            </div>
+                        </label>
+                    </article>
+
+                    <article class="meal-card main-c">     
+                        <label for="paneer-rice">
+                            <input type="checkbox" name="selected-meal-btn"  id="paneer-rice" class="selected-meal-btn" value="9.10" title="Paneer jalfrezi with cumin rice">
+                            <div class="meal-info">
+                                <figure>
+                                    <img src="images/food7.jpg" alt="Paneer jalfrezi with cumin rice">
+                                    <p class="ingredients">
+                                        Rapeseed oil, onion,  garlic cloves, ginger, coriander, cumin seeds, tomatoes, paneer, large peppers,  green chilli, brown basmati rice.
+                                    </p>
+                                </figure>
+                                <figcaption>Paneer jalfrezi with cumin rice</figcaption>
+                                <p class="price">9.10$</p>            
+                            </div>
+                        </label>
+                    </article>
+
+                    <article class="meal-card main-c">     
+                        <label for="pasta-ariabbiata">
+                            <input type="checkbox" name="selected-meal-btn"  id="pasta-ariabbiata" class="selected-meal-btn" value="5.50" title="Pasta arrabbiata with aubergine">
+                            <div class="meal-info">
+                                <figure>
+                                    <img src="images/food8.jpg" alt="Pasta arrabbiata with aubergine">
+                                    <p class="ingredients">
+                                        Oil, onion, garlic cloves, chilli flakes, smoked paprika, tomatoes, aubergine, wholemeal penne or fusilli,vegetarian Italian-style hard cheese.
+                                    </p>
+                                </figure>
+                                <figcaption>Pasta arrabbiata with aubergine</figcaption>
+                                <p class="price">5.50$</p>            
+                            </div>
+                        </label>
+                    </article>
+
+                    <article class="meal-card main-c">     
+                        <label for="hake-seafood">
+                            <input type="checkbox" name="selected-meal-btn"  id="hake-seafood" class="selected-meal-btn" value="12.87" title="Hake & seafood cataplana">
+                            <div class="meal-info">
+                                <figure>
+                                    <img src="images/food9.jpg" alt="Hake & seafood cataplana">
+                                    <p class="ingredients">
+                                        Onion, potatoes, red pepper, courgette, tomatoes, garlic cloves, cider vinegar, vegetable bouillon powder, mussels, peeled prawns, parsley.
+                                    </p>
+                                </figure>
+                                <figcaption>Hake & seafood cataplana</figcaption>
+                                <p class="price">12.87$</p>            
+                            </div>
+                        </label>
+                    </article>
+
+                    <article class="meal-card dessert">     
+                        <label for="pancakes-left">
+                            <input type="checkbox" name="selected-meal-btn"  id="pancakes-left" class="selected-meal-btn" value="4.89" title="Leftover porridge pancakes">
+                            <div class="meal-info">
+                                <figure>
+                                    <img src="images/food10.jpg" alt="Leftover porridge pancakes">
+                                    <p class="ingredients">
+                                        Porridge, self-raising flour, baking powder, ripe banana, large eggs, milk, sunflower oil,fruit, yogurt and maple syrup. 
+                                    </p>
+                                </figure>
+                                <figcaption>Leftover porridge pancakes</figcaption>
+                                <p class="price">4.89$</p>            
+                            </div>
+                        </label>
+                    </article>
+
+                    <article class="meal-card dessert">     
+                        <label for="peach-yogurt">
+                            <input type="checkbox" name="selected-meal-btn"  id="peach-yogurt" class="selected-meal-btn" value="4.29" title="Peach & orange yogurt pots with ginger oats">
+                            <div class="meal-info">
+                                <figure>
+                                    <img src="images/food11.jpg" alt="Peach & orange yogurt pots with ginger oats">
+                                    <p class="ingredients">
+                                        Peaches, nectarines, orange, porridge oats, pine nuts, ginger, cinnamon, sultanas, bio yogurt. 
+                                    </p>
+                                </figure>
+                                <figcaption>Peach & orange yogurt pots with ginger oats</figcaption>
+                                <p class="price">4.29$</p>            
+                            </div>
+                        </label>
+                    </article>
+
+                    <article class="meal-card main-c">     
+                        <label for="chicken-couscouse">
+                            <input type="checkbox" name="selected-meal-btn"  id="chicken-couscouse" class="selected-meal-btn" value="7.99" title="Chicken & couscous one-pot">
+                            <div class="meal-info">
+                                <figure>
+                                    <img src="images/food12.jpg" alt="Chicken & couscous one-pot">
+                                    <p class="ingredients">
+                                        Chicken thighs, turmeric, garam masala, sunflower oil, onions, garlic, chicken stock, green olives, lemon, couscous, parsley.
+                                    </p>
+                                </figure>
+                                <figcaption>Chicken & couscous one-pot</figcaption>
+                                <p class="price">7.99$</p>            
+                            </div>
+                        </label>
+                    </article>
+
+                    <article class="meal-card starter">     
+                        <label for="tomato-soup">
+                            <input type="checkbox" name="selected-meal-btn"  id="tomato-soup" class="selected-meal-btn" value="5.99" title="Fresh tomato soup with cheesy cornbread">
+                            <div class="meal-info">
+                                <figure>
+                                    <img src="images/food13.jpg" alt="Fresh tomato soup with cheesy cornbread">
+                                    <p class="ingredients">
+                                        Wholemeal self-raising flour, polenta, cheddar, paprika, onions, chilli, egg, milk, celery, onions, carrots, potatoes, tomatoes, tomato purée.
+                                    </p>
+                                </figure>
+                                <figcaption>Fresh tomato soup with cheesy cornbread</figcaption>
+                                <p class="price">5.99$</p>            
+                            </div>
+                        </label>
+                    </article>
+
+                    <article class="meal-card dessert">     
+                        <label for="molten-chocolate">
+                            <input type="checkbox" name="selected-meal-btn"  id="molten-chocolate" class="selected-meal-btn" value="7.49" title="Molten Chocolate Cake">
+                            <div class="meal-info">
+                                <figure>
+                                    <img src="images/food14.jpg" alt="Molten Chocolate Cake">
+                                    <p class="ingredients">
+                                        Chocolate cake with a molten chocolate center, topped with vanilla ice cream in a chocolate shell. Big enough to share, too good to actually do it.
+                                    </p>
+                                </figure>
+                                <figcaption>Molten Chocolate Cake</figcaption>
+                                <p class="price">7.49$</p>            
+                            </div>
+                        </label>
+                    </article>
+
+                    <article class="meal-card dessert">     
+                        <label for="paradise-pie">
+                            <input type="checkbox" name="selected-meal-btn"  id="paradise-pie" class="selected-meal-btn" value="8.49" title="Paradise Pie">
+                            <div class="meal-info">
+                                <figure>
+                                    <img src="images/food15.jpg" alt="Paradise Pie">
+                                    <p class="ingredients">
+                                        Chocolate chip, walnut and coconut layered bar. Topped with vanilla ice cream, walnuts & drizzled with hot fudge & caramel. 
+                                    </p>
+                                </figure>
+                                <figcaption>Paradise Pie</figcaption>
+                                <p class="price">8.49$</p>            
+                            </div>
+                        </label>
+                    </article>
+    
+                </div>
+            </section>
+        </main>
+
+        <footer class="main-footer">
+            <img src="images/logo2.png" alt="logo">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="meal.html">Meal</a>
+                </li>
+                <li>
+                    <a href="https://tasty.co/topic/easy-dinner">Recipes</a>
+                </li>
+            </ul> 
+            <p>Follow us:</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/renito.terzieva"><i class="fab fa-facebook-square" aria-hidden="true"></i></a> 
+                       <a href="https://twitter.com/login?lang=bg"><i class="fab fa-twitter-square" aria-hidden="true"></i></a> 
+                        <a href="https://www.instagram.com/reni_terzieva/?hl=bg"><i class="fab fa-instagram-square" aria-hidden="true"></i></a>
+                        <a href="mailto:renito592@gmail.com"><i class="fas fa-envelope-square" aria-hidden="true"></i></a>
+            </div>
+        <hr>
+            <p class="copyright">© 2020 FMI - Reneta Terzieva</p>
+        </footer>
+    </div>
+    <script src="script/open-search-button.js"></script>
+    <script>
+        var chbMeals = document.getElementsByClassName('selected-meal-btn');
+        
+            for (var i=0 ; i<chbMeals.length; i++) {
+                if ( chbMeals[i].type === 'checkbox' ) {
+                    chbMeals[i].onclick = function() {
+                        
+                        var val = parseFloat( document.getElementById('total-sum').innerHTML );
+                        if ( this.checked ) {
+                            val += parseFloat(this.value);
+                            $('#cart').append('<li class="'+this.id+'">'+ this.title +'<span> '+ this.value + ' $</span></li>');
+                             }
+                             else {
+                            val -= parseFloat(this.value);
+                            $('.'+this.id).remove();
+                            }
+                            document.getElementById('total-sum').innerHTML=val.toFixed(2) + " $";
+                            document.getElementById('total-sum-top').innerHTML=val.toFixed(2) + " $";
+                    }          
+                }
+            }
+            
+    </script>
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("order");
+        var menuIcon = document.getElementById("menu-icon");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+            menuIcon.classList.add("when-order-sticky");
+            
+          } else {
+            header.classList.remove("sticky");
+            menuIcon.classList.remove("when-order-sticky")
+            
+          }
+        }
+        </script>
+        <script>
+            $(".filter").on('click',function () {
+                $(".meal-card").css({
+                    "display":"none"
+                });
+                if (this.id=="starters") {
+                    $(".starter").css({
+                        "display":"block"
+                    });
+                }else if (this.id=="main-c") {
+                    $(".main-c").css({
+                        "display":"block"
+                    });
+                }else if (this.id=="desserts") {
+                    $(".dessert").css({
+                        "display":"block"
+                    });
+                }else if (this.id=="all") {
+                    $(".meal-card").css({
+                        "display":"block"
+                    });
+                }
+            });
+        </script>
+</body>
+</html>
